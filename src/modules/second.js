@@ -1,6 +1,9 @@
+import getData from "./getData";
+
 const second = () => {
     const cartBtn = document.getElementById('cart')
-    console.log("second");
+
+    console.log(getData());
 }
 
 export default second
