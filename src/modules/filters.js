@@ -1,4 +1,5 @@
 export const searchFilter = (goods, value) => {
-    console.log(goods)
-    return goods
+    return goods.filter((goodsItem) => {
+        return goodsItem.title.includes(value)
+    })
 }
