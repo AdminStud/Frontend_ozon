@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cart */ \"./src/modules/cart.js\");\n/* harmony import */ var _modules_second__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/second */ \"./src/modules/second.js\");\n\r\n\r\n\r\n(0,_modules_cart__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_second__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack://study/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cart */ \"./src/modules/cart.js\");\n/* harmony import */ var _modules_second__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/second */ \"./src/modules/second.js\");\n\n\n\n(0,_modules_cart__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n;(0,_modules_second__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack://study/./src/index.js?\n}");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mo
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst cart = () => {\r\n\r\n    const cartBtn = document.getElementById(\"cart\")\r\n    const cartModal = document.querySelector(\".cart\")\r\n    const cartCloseBtn = cartModal.querySelector(\".cart-close\")\r\n\r\n    const openCart = () => {\r\n        cartModal.style.display = \"flex\"\r\n    }\r\n\r\n    const closeCart = () => {\r\n        cartModal.style.display = \"\"\r\n    }\r\n\r\n    cartBtn.addEventListener(\"click\", openCart)\r\n    cartCloseBtn.addEventListener(\"click\", closeCart)\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cart);\n\n//# sourceURL=webpack://study/./src/modules/cart.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst cart = () => {\n\n    const cartBtn = document.getElementById(\"cart\")\n    const cartModal = document.querySelector(\".cart\")\n    const cartCloseBtn = cartModal.querySelector(\".cart-close\")\n\n    const openCart = () => {\n        cartModal.style.display = \"flex\"\n    }\n\n    const closeCart = () => {\n        cartModal.style.display = \"\"\n    }\n\n    cartBtn.addEventListener(\"click\", openCart)\n    cartCloseBtn.addEventListener(\"click\", closeCart)\n\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cart);\n\n//# sourceURL=webpack://study/./src/modules/cart.js?\n}");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getData = () => {\r\n    return fetch('https://test-e4ca5-default-rtdb.firebaseio.com/goods.json')\r\n        .then((response) => {\r\n            return response.json()\r\n        })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://study/./src/modules/getData.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getData = () => {\n    return fetch('https://test-e4ca5-default-rtdb.firebaseio.com/goods.json')\n        .then((response) => {\n            return response.json()\n        })\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://study/./src/modules/getData.js?\n}");
 
 /***/ }),
 
@@ -46,7 +46,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst postData = () => {\r\n    return fetch('http://localhost:3000/goods', {\r\n        method: 'POST',\r\n        body: JSON.stringify({\r\n            title: \"Ведьмак 3\",\r\n            price: 3000,\r\n            sale: true,\r\n            img: \"https://cdn1.ozone.ru/multimedia/c400/1023547851.jpg\",\r\n            category: \"Игры и софт\"\r\n        }),\r\n        headers: {\r\n            'Content-type': 'application/json; charset=UTF-8',\r\n        },\r\n    })\r\n        .then(res => res.json())\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postData);\n\n//# sourceURL=webpack://study/./src/modules/postData.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst postData = () => {\n    return fetch('http://localhost:3000/goods', {\n        method: 'POST',\n        body: JSON.stringify({\n            title: \"Ведьмак 3\",\n            price: 3000,\n            sale: true,\n            img: \"https://cdn1.ozone.ru/multimedia/c400/1023547851.jpg\",\n            category: \"Игры и софт\"\n        }),\n        headers: {\n            'Content-type': 'application/json; charset=UTF-8',\n        },\n    })\n        .then(res => res.json())\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postData);\n\n//# sourceURL=webpack://study/./src/modules/postData.js?\n}");
+
+/***/ }),
+
+/***/ "./src/modules/renderGoods.js":
+/*!************************************!*\
+  !*** ./src/modules/renderGoods.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst renderGoods = (goods) => {\n    const goodWrapper = document.querySelector('.goods')\n\n    goods.forEach((goodsItem) => {\n        goodWrapper.insertAdjacentHTML('beforeend', `\n                <div class=\"col-12 col-md-6 col-lg-4 col-xl-3\">\n\t\t\t\t    <div class=\"card\">\n\t\t\t\t\t    <div class=\"card-img-wrapper\">\n\t\t\t\t\t\t    <span class=\"card-img-top\"\n\t\t\t\t\t\t\t    style=\"background-image: url('${goodsItem.img}')\">\n                            </span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body justify-content-between\">\n\t\t\t\t\t\t    <div class=\"card-price\">33990 ₽</div>\n\t\t\t\t\t\t\t<h5 class=\"card-title\">Игровая приставка Sony PlayStation 4 Pro</h5>\n\t\t\t\t\t\t\t<button class=\"btn btn-primary\">В корзину</button>\n\t\t\t\t\t\t</div>\n\t\t\t\t    </div>\n\t\t\t\t</div>\n            `)\n    })\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderGoods);\n\n//# sourceURL=webpack://study/./src/modules/renderGoods.js?\n}");
 
 /***/ }),
 
@@ -56,7 +66,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _postData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./postData */ \"./src/modules/postData.js\");\n\r\n\r\n\r\nconst second = () => {\r\n    const cartBtn = document.getElementById('cart')\r\n\r\n    ;(0,_getData__WEBPACK_IMPORTED_MODULE_0__[\"default\"])().then((data) => {\r\n        console.log(data);\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (second);\n\n//# sourceURL=webpack://study/./src/modules/second.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _postData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./postData */ \"./src/modules/postData.js\");\n/* harmony import */ var _renderGoods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderGoods */ \"./src/modules/renderGoods.js\");\n\n\n\n\n\nconst second = () => {\n    const cartBtn = document.getElementById('cart')\n\n    ;(0,_getData__WEBPACK_IMPORTED_MODULE_0__[\"default\"])().then((data) => {\n        ;(0,_renderGoods__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(data)\n    })\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (second);\n\n//# sourceURL=webpack://study/./src/modules/second.js?\n}");
 
 /***/ })
 
