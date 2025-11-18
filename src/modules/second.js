@@ -8,6 +8,8 @@ const second = () => {
 
     getData().then((data) => {
         renderGoods(data)
+        renderGoods(data)
+        renderGoods(data)
     })
 }
 
