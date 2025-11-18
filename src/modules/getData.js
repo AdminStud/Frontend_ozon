@@ -1,5 +1,5 @@
 const getData = () => {
-    return fetch('https://jsonplaceholder.typicode.com/users/')
+    return fetch('https://test-e4ca5-default-rtdb.firebaseio.com/goods.json')
         .then((response) => {
             return response.json()
         })
