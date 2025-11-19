@@ -8,7 +8,7 @@ const filter = () => {
 
     minInput.addEventListener('input', () => {
         getData().then((data) => {
-                renderGoods(priceFilter(data, minInput.value, maxInput.value)
+                renderGoods(priceFilter(data, minInput.value, maxInput.value))
             })
     })
 
