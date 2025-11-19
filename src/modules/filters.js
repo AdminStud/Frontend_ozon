@@ -10,15 +10,15 @@ export const categoryFilter = (goods, value) => {
     })
 }
 
-export const priceFilter = (goods, value, min, max) => {
+export const priceFilter = (goods, min, max) => {
     return goods.filter((goodsItem) => {
         if (min === '' && max === '') {
             return goodsItem
-        }else if(min !== '' && max !== ''){
+        } else if (min !== '' && max !== '') {
 
-        }else if(min !== '' && max === ''){
+        } else if (min !== '' && max === '') {
             return goodsItem.price > +min
-        }else if(min === '' && max !== ''){
+        } else if (min === '' && max !== '') {
             return goodsItem.price < +max
         }
     })
