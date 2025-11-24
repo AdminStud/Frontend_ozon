@@ -1,4 +1,5 @@
 import renderCart from "./renderСart"
+import postData from "./postData"
 
 const cart = () => {
 
@@ -6,6 +7,7 @@ const cart = () => {
     const cartModal = document.querySelector('.cart')
     const cartCloseBtn = cartModal.querySelector('.cart-close')
     const cartTotal = cartModal.querySelector('.cart-total > span')
+    const cartSendBtn = cartModal.querySelector('.cart-confirm')
     const goodsWrapper= document.querySelector('.goods')
     const cartWrapper = document.querySelector('.cart-wrapper')
 
@@ -68,6 +70,20 @@ const cart = () => {
             return sum + goodItem.price
         }, 0)
         }
+    })
+
+    cartSendBtn.addEventListener('click', () => {
+        const cart = localStorage.getItem('cart') ? 
+            JSON.parse(localStorage.getItem('cart')) : []
+        
+        postData(cart).then(() => {
+            localStorage.removeItem('cart')
+
+            renderCart([])
+
+            cartTotal.textContent = 0
+        
+        })
     })
 }
 
