@@ -1,12 +1,18 @@
+import renderCart from "./renderСart"
+
 const cart = () => {
 
     const cartBtn = document.getElementById("cart")
     const cartModal = document.querySelector(".cart")
     const cartCloseBtn = cartModal.querySelector(".cart-close")
     const goodsWrapper= document.querySelector('.goods')
-
+    // cart-total
     const openCart = () => {
+        const cart = localStorage.getItem('cart') ? 
+                 JSON.parse(localStorage.getItem('cart')) : []
         cartModal.style.display = "flex"
+
+        renderCart(cart)
     }
 
     const closeCart = () => {
@@ -23,7 +29,8 @@ const cart = () => {
 
             const goods = JSON.parse(localStorage.getItem('goods'))
 
-            const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+            const cart = localStorage.getItem('cart') ? 
+                 JSON.parse(localStorage.getItem('cart')) : []
             const goodItem = goods.find((item) => {
                 return item.id === key
             })
